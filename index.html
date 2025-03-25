@@ -3,205 +3,294 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game123.best - Play Free Online Games Instantly</title>
-    <meta name="description" content="Play the best free online games on Game123.best. Action, design, sports, and pixel games available instantly with no downloads required.">
+    <title>Monster Survivors - Epic Survival Adventure Game | Play Online Now</title>
+    <meta name="description" content="Play Monster Survivors online for free! An action-packed survival game where you battle hordes of monsters in an ever-changing world. No download required.">
     <link rel="canonical" href="https://game123.best">
     
-    <!-- Favicon -->
-    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Monster Survivors - Epic Survival Adventure Game">
+    <meta property="og:description" content="Battle endless hordes of monsters in this thrilling survival adventure game. Play online instantly!">
+    <meta property="og:url" content="https://game123.best">
+    <meta property="og:type" content="website">
     
-    <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/apple-theme.css">
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'apple-blue': '#007AFF',
+                        'apple-green': '#34C759',
+                        'apple-indigo': '#5856D6',
+                        'apple-orange': '#FF9500',
+                        'apple-pink': '#FF2D55',
+                        'apple-purple': '#AF52DE',
+                        'apple-red': '#FF3B30',
+                        'apple-teal': '#5AC8FA',
+                        'apple-yellow': '#FFCC00',
+                        'apple-gray': '#8E8E93',
+                        'apple-light-gray': '#E5E5EA',
+                        'apple-bg': '#F2F2F7',
+                        'apple-dark-bg': '#1C1C1E',
+                    }
+                },
+                fontFamily: {
+                    'apple': ['-apple-system', 'BlinkMacSystemFont', 'San Francisco', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif']
+                },
+                borderRadius: {
+                    'apple': '12px',
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* Custom styles to enhance Apple aesthetic */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #F2F2F7;
+            color: #1C1C1E;
+        }
+        
+        .game-container {
+            aspect-ratio: 16/9;
+            max-height: 80vh;
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .full-screen-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 50;
+            background-color: #000;
+        }
+        
+        .full-screen-btn {
+            position: absolute;
+            bottom: 16px;
+            right: 16px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border-radius: 8px;
+            padding: 8px;
+            cursor: pointer;
+            z-index: 10;
+            transition: all 0.2s ease;
+        }
+        
+        .full-screen-btn:hover {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        
+        .apple-card {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .apple-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .apple-button {
+            background-color: #007AFF;
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+        
+        .apple-button:hover {
+            background-color: #0071EB;
+            transform: translateY(-1px);
+        }
+        
+        .section-header {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+        }
+        
+        .section-header:after {
+            content: "";
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            height: 3px;
+            width: 40px;
+            background-color: currentColor;
+            border-radius: 3px;
+        }
+        
+        @media (max-width: 768px) {
+            .game-container {
+                aspect-ratio: 16/9;
+                height: 50vh;
+            }
+        }
+    </style>
 </head>
-<body>
-    <!-- Header with Navigation -->
-    <header class="header">
-        <div class="container">
-            <div class="header-content">
-                <a href="/" class="logo">
-                    <span class="logo-text">Game123</span>
-                </a>
-                
-                <nav class="main-nav">
-                    <ul class="nav-list">
-                        <li class="nav-item">
-                            <a href="games/action/index.html" class="nav-link">Action</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="games/design/index.html" class="nav-link">Design</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="games/sports/index.html" class="nav-link">Sports</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="games/pixel/index.html" class="nav-link">Pixel</a>
-                        </li>
-                    </ul>
-                </nav>
-                
-                <div class="search-container">
-                    <form id="search-form" action="/search" method="get">
-                        <input type="text" id="search-input" name="q" placeholder="Search games..." class="search-input">
-                        <button type="submit" class="search-button">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="search-icon">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                            </svg>
-                        </button>
-                    </form>
-                    <div id="search-results" class="search-results"></div>
-                </div>
-                
-                <button class="mobile-menu-toggle" aria-label="Toggle menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
+<body class="bg-apple-bg text-apple-dark-bg font-apple">
+    <header class="bg-white shadow-sm sticky top-0 z-40">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="https://game123.best" class="text-2xl font-bold text-apple-indigo">Monster Survivors</a>
+            <nav>
+                <ul class="flex space-x-6 text-sm">
+                    <li><a href="#play" class="text-apple-blue hover:text-apple-indigo transition font-medium">Play</a></li>
+                    <li><a href="#about" class="text-apple-gray hover:text-apple-indigo transition font-medium">About</a></li>
+                    <li><a href="#features" class="text-apple-gray hover:text-apple-indigo transition font-medium">Features</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-    <main>
-        <!-- Hero Section -->
-        <section class="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <h1 class="hero-title">Play the Best Online Games</h1>
-                    <p class="hero-subtitle">Instant fun in your browser with no downloads required</p>
-                    <a href="#featured-games" class="hero-button">Play Now</a>
+    <main class="container mx-auto px-4 py-6 max-w-5xl">
+        <section class="text-center mb-10 pt-4">
+            <h1 class="text-4xl font-bold mb-3 text-apple-indigo">Monster Survivors</h1>
+            <p class="text-xl max-w-2xl mx-auto text-gray-600">Fight endless waves of monsters, collect power-ups, and survive in this thrilling adventure!</p>
+        </section>
+
+        <section id="play" class="mb-16">
+            <div id="game-wrapper" class="game-container w-full mx-auto bg-black">
+                <iframe id="game-iframe" src="https://cloud.onlinegames.io/games/2025/unity/monster-survivors/index-og.html" 
+                        class="w-full h-full border-0" 
+                        allowfullscreen></iframe>
+                <div id="fullscreen-btn" class="full-screen-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-5 w-5">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5v-4m0 4h-4m4 0l-5-5" />
+                    </svg>
                 </div>
             </div>
         </section>
 
-        <!-- Featured Games -->
-        <section id="featured-games" class="featured-games">
-            <div class="container">
-                <h2 class="section-title">Featured Games</h2>
+        <section id="about" class="mb-16">
+            <h2 class="text-2xl font-bold text-apple-purple section-header">About the Game</h2>
+            <div class="apple-card p-6">
+                <p class="mb-4 leading-relaxed">Monster Survivors is an action-packed survival game where your goal is simple yet challenging: survive as long as possible against endless waves of monsters. As time progresses, monsters become stronger and more numerous, testing your skills and strategy.</p>
                 
-                <div class="games-grid">
-                    <!-- Monster Survivors -->
-                    <a href="games/action/monster-survivors.html" class="game-card">
-                        <div class="game-card-image">
-                            <img src="assets/images/game-thumbnails/monster-survivors.jpg" alt="Monster Survivors" loading="lazy">
-                            <div class="game-card-category">Action</div>
-                        </div>
-                        <div class="game-card-content">
-                            <h3 class="game-card-title">Monster Survivors</h3>
-                            <p class="game-card-description">Battle endless waves of monsters in this thrilling survival game</p>
-                        </div>
-                    </a>
-                    
-                    <!-- Other Featured Games -->
-                    <a href="games/design/puzzle-architect.html" class="game-card">
-                        <div class="game-card-image">
-                            <img src="assets/images/game-thumbnails/puzzle-architect.jpg" alt="Puzzle Architect" loading="lazy">
-                            <div class="game-card-category">Design</div>
-                        </div>
-                        <div class="game-card-content">
-                            <h3 class="game-card-title">Puzzle Architect</h3>
-                            <p class="game-card-description">Design and solve intricate puzzles in this brain-teasing adventure</p>
-                        </div>
-                    </a>
-                    
-                    <a href="games/sports/soccer-stars.html" class="game-card">
-                        <div class="game-card-image">
-                            <img src="assets/images/game-thumbnails/soccer-stars.jpg" alt="Soccer Stars" loading="lazy">
-                            <div class="game-card-category">Sports</div>
-                        </div>
-                        <div class="game-card-content">
-                            <h3 class="game-card-title">Soccer Stars</h3>
-                            <p class="game-card-description">Compete in fast-paced soccer matches with simple controls</p>
-                        </div>
-                    </a>
-                    
-                    <a href="games/pixel/retro-adventure.html" class="game-card">
-                        <div class="game-card-image">
-                            <img src="assets/images/game-thumbnails/retro-adventure.jpg" alt="Retro Adventure" loading="lazy">
-                            <div class="game-card-category">Pixel</div>
-                        </div>
-                        <div class="game-card-content">
-                            <h3 class="game-card-title">Retro Adventure</h3>
-                            <p class="game-card-description">Explore a nostalgic 8-bit world filled with secrets</p>
-                        </div>
-                    </a>
+                <p>Each run is unique, with random power-ups and enemy patterns creating a fresh experience every time you play. Can you discover the optimal build and strategy to achieve the highest survival time?</p>
+            </div>
+        </section>
+
+        <section id="features" class="mb-16">
+            <h2 class="text-2xl font-bold text-apple-orange section-header">Key Features</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="apple-card p-5">
+                    <div class="text-apple-red mb-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-8 w-8">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Fast-Paced Combat</h3>
+                    <p class="text-gray-600 text-sm">Battle against hordes of diverse monsters with unique abilities and attack patterns.</p>
+                </div>
+                
+                <div class="apple-card p-5">
+                    <div class="text-apple-green mb-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-8 w-8">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Progression System</h3>
+                    <p class="text-gray-600 text-sm">Level up your character and choose powerful upgrades to enhance your abilities.</p>
+                </div>
+                
+                <div class="apple-card p-5">
+                    <div class="text-apple-blue mb-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-8 w-8">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Customizable Builds</h3>
+                    <p class="text-gray-600 text-sm">Create unique character builds with different weapons and power combinations.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Game Categories -->
-        <section class="game-categories">
-            <div class="container">
-                <h2 class="section-title">Browse by Category</h2>
-                
-                <div class="category-grid">
-                    <a href="games/action/index.html" class="category-card">
-                        <div class="category-icon action-icon"></div>
-                        <h3 class="category-title">Action Games</h3>
-                        <p class="category-description">Fast-paced adventures and challenges</p>
-                    </a>
+        <section id="tips" class="mb-16">
+            <h2 class="text-2xl font-bold text-apple-green section-header">Survival Tips</h2>
+            <div class="apple-card p-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <h3 class="text-lg font-semibold text-apple-blue mb-2">Movement Is Key</h3>
+                        <p class="text-sm text-gray-600 mb-4">Never stop moving! Constantly reposition yourself to avoid being surrounded by monsters.</p>
                     
-                    <a href="games/design/index.html" class="category-card">
-                        <div class="category-icon design-icon"></div>
-                        <h3 class="category-title">Design Games</h3>
-                        <p class="category-description">Creative and strategic building games</p>
-                    </a>
+                        <h3 class="text-lg font-semibold text-apple-blue mb-2">Prioritize Upgrades</h3>
+                        <p class="text-sm text-gray-600">Focus on complementary powers to create powerful synergies for your character.</p>
+                    </div>
                     
-                    <a href="games/sports/index.html" class="category-card">
-                        <div class="category-icon sports-icon"></div>
-                        <h3 class="category-title">Sports Games</h3>
-                        <p class="category-description">Competitive sports simulations</p>
-                    </a>
+                    <div>
+                        <h3 class="text-lg font-semibold text-apple-blue mb-2">Collect Experience</h3>
+                        <p class="text-sm text-gray-600 mb-4">Don't leave experience gems behind! These power your level-ups which are crucial for survival.</p>
                     
-                    <a href="games/pixel/index.html" class="category-card">
-                        <div class="category-icon pixel-icon"></div>
-                        <h3 class="category-title">Pixel Games</h3>
-                        <p class="category-description">Retro-style games with pixel art</p>
-                    </a>
+                        <h3 class="text-lg font-semibold text-apple-blue mb-2">Balance Your Build</h3>
+                        <p class="text-sm text-gray-600">While offensive upgrades help clear enemies faster, don't neglect defensive options.</p>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <span class="logo-text">Game123</span>
-                    <p class="footer-tagline">Your instant gaming platform</p>
-                </div>
-                
-                <div class="footer-links">
-                    <div class="footer-column">
-                        <h4 class="footer-heading">Categories</h4>
-                        <ul class="footer-list">
-                            <li><a href="games/action/index.html">Action Games</a></li>
-                            <li><a href="games/design/index.html">Design Games</a></li>
-                            <li><a href="games/sports/index.html">Sports Games</a></li>
-                            <li><a href="games/pixel/index.html">Pixel Games</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="footer-column">
-                        <h4 class="footer-heading">Information</h4>
-                        <ul class="footer-list">
-                            <li><a href="/about.html">About Us</a></li>
-                            <li><a href="/privacy.html">Privacy Policy</a></li>
-                            <li><a href="/terms.html">Terms of Service</a></li>
-                            <li><a href="/contact.html">Contact Us</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <p class="copyright">&copy; 2023 Game123.best - All rights reserved</p>
-            </div>
+    <footer class="bg-white py-6 border-t border-apple-light-gray">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-sm text-gray-500">&copy; 2023 game123.best - All rights reserved</p>
+            <p class="text-xs text-gray-400 mt-2">Monster Survivors is an online action survival game. This website is not affiliated with the original game developers.</p>
         </div>
     </footer>
 
-    <!-- JavaScript -->
-    <script src="assets/js/navigation.js"></script>
-    <script src="assets/js/search.js"></script>
+    <script>
+        // Fullscreen toggle functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const gameWrapper = document.getElementById('game-wrapper');
+            const gameIframe = document.getElementById('game-iframe');
+            const fullscreenBtn = document.getElementById('fullscreen-btn');
+            let isFullScreen = false;
+            
+            fullscreenBtn.addEventListener('click', function() {
+                if (!isFullScreen) {
+                    // Enter fullscreen
+                    gameWrapper.classList.add('full-screen-container');
+                    document.body.style.overflow = 'hidden';
+                    fullscreenBtn.innerHTML = `
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-5 w-5">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    `;
+                } else {
+                    // Exit fullscreen
+                    gameWrapper.classList.remove('full-screen-container');
+                    document.body.style.overflow = 'auto';
+                    fullscreenBtn.innerHTML = `
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-5 w-5">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5v-4m0 4h-4m4 0l-5-5" />
+                        </svg>
+                    `;
+                }
+                isFullScreen = !isFullScreen;
+            });
+            
+            // Track page navigation
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const section = this.getAttribute('href').substring(1);
+                    if (section) {
+                        console.log('User navigated to:', section);
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html> 
